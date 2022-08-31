@@ -54,5 +54,28 @@ Uma vez que compreendemos um pouco melhor a natureza dos dados utilizados, é ho
 
 ### Implementando o Sistema
 
+O método escolhido para o sistema de recomendações é o de similaridade. Com ele, o algoritmo pega como input do usuário o nome de um filme e devolve como output 5 filmes de recomendação baseados nos seguintes critérios:
+
+* overview: Breve descrição do filme
+* genres: Lista de Dicionários com todos os gêneros associados ao filme
+* keywords: Palavras chaves associadas ao filme
+* cast: Elenco do filme
+* crew: Equipe Técnica
+
+Com base nesses atributos, o sistema escolhe dentro da sua base de dados quais os filmes que mais se aproximam do filme que o usuário alimentou ao algoritmo. Para isso foi utilizada a função CountVectorizer, que pega os parâmetros selecionados para calcular uma matriz de similaridade entre todos os filmes. Em seguida, fiz uma função que consulta essa matriz e escolhe um número arbitrário de filmes com a maior pontuação de similaridade. O código usado para a função do sistema ficou assim:
+
+```
+def sistema_recomendacao(movie):
+  index = df3[df3["title"] == movie].index[0]
+  distance = sorted(list(enumerate(similarity[index])), reverse=True, key = lambda x:x[1])
+  for i in distance[1:6]:
+    print(df3.iloc[i[0]].title)
+```
+Feito isso, tudo que falta para ter um sistema de recomendação de filmes completo é apenas informar para a função para qual filme você deseja receber uma lista de recomendações de outros titulos. Desse jeito:
+
+![image](https://user-images.githubusercontent.com/77032413/187699258-ca2d5d08-734b-49ae-844d-619dfa8ef37b.png)
+
+E pronto, está definido um sistema de recomendação de filmes!
+
 ##### Referências
 - TMDB Movies metadata: https://www.kaggle.com/tmdb/tmdb-movie-metadata
