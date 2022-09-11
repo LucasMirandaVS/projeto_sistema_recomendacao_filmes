@@ -1,5 +1,5 @@
 # Sistema de Recomendação de Filmes
-Neste projeto, construí meu próprio sistema de recomendação de filmes. O sistema foi feito a partir de dados sobre filmes coletados da base de dados do TMDB, através de sua API. O TMDB é uma vasta base de dados com informações sobre filmes, séries, curtas e animações. Lá é possível encontrar as mais diversas informações sobre os filmes, como elenco, orçamento, equipe de produção, atores, e um dos aspectos mais importantes para o projeto: notas de avaliação dos usuários. O projeto foi feito usando a linguagem python, mais especificamente os pacotes pandas, matplotlib, seabonr, requests e o pacote tmdbv3api para usar a API. 
+Neste projeto, construí meu próprio sistema de recomendação de filmes. O sistema foi feito a partir de dados sobre filmes coletados da base de dados do TMDB, através de sua API. O TMDB é uma vasta base de dados com informações sobre filmes, séries, curtas e animações. Lá é possível encontrar as mais diversas informações sobre os filmes, como elenco, orçamento, equipe de produção, atores, e um dos aspectos mais importantes para o projeto: notas de avaliação dos usuários. O projeto foi feito usando a linguagem python, mais especificamente os pacotes pandas, matplotlib, seaborn, requests e o pacote tmdbv3api para usar a API. 
 
 
 ### Coleta dos Dados
